@@ -7,7 +7,13 @@ This is the official implementation of [PipeOptim: Ensuring Effective 1F1B Sched
 
 This is a PyTroch implementation (based on the source code of [PipeDream](https://github.com/msr-fiddle/pipedream) and [SpecTrain](https://github.com/ntueclab/SpecTrain-PyTorch)).
 
+PipeOptim uses the predicted weights to perform forward. The prediction formula for the forward pass is: 
+<div align="center">
+<img src="fig/pipeoptim.jpeg" alt="drawing" width="200" />
+</div>
+
 ## Environmental Setup
+The experiment settings are the same as [PipeDream](https://github.com/msr-fiddle/pipedream).
 
 ## Quick Start
 ```bash
