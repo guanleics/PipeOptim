@@ -13,7 +13,7 @@ PipeOptim uses the predicted weights to perform forward. The prediction formula 
 	\label{eq:weight_update}
 \end{equation}
 
-$\hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t}$,
+$$\hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t}$$,
 where $lr$ is the learning rate, $s$ denotes the weight version difference, and $\Delta \mathbf{W}_{t}$ are computed based on the update rule of the used optimizer.
 
 <div align="center">
