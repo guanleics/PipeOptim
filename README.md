@@ -8,17 +8,12 @@ This is the official implementation of [PipeOptim: Ensuring Effective 1F1B Sched
 This is a PyTroch implementation (based on the source code of [PipeDream](https://github.com/msr-fiddle/pipedream) and [SpecTrain](https://github.com/ntueclab/SpecTrain-PyTorch)).
 
 PipeOptim uses the predicted weights to perform forward. The prediction formula for the forward pass is: 
-\begin{equation}
-	\hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t}, 
-	\label{eq:weight_update}
-\end{equation}
-
-$$\hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t}$$,
+```math
+\hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t},
+```
 where $lr$ is the learning rate, $s$ denotes the weight version difference, and $\Delta \mathbf{W}_{t}$ are computed based on the update rule of the used optimizer.
 
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-```
+
 
 <div align="center">
 <img src="fig/pipeoptim.jpeg" alt="drawing" width="400" />
