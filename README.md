@@ -16,6 +16,10 @@ PipeOptim uses the predicted weights to perform forward. The prediction formula 
 $$\hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t}$$,
 where $lr$ is the learning rate, $s$ denotes the weight version difference, and $\Delta \mathbf{W}_{t}$ are computed based on the update rule of the used optimizer.
 
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
+
 <div align="center">
 <img src="fig/pipeoptim.jpeg" alt="drawing" width="400" />
 </div>
