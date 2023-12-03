@@ -9,7 +9,7 @@ This is a PyTroch implementation (based on the source code of [PipeDream](https:
 
 PipeOptim uses the predicted weights to perform forward. The prediction formula for the forward pass is: 
 <div align="center">
-<img src="fig/pipeoptim.jpeg" alt="drawing" width="200" />
+<img src="fig/pipeoptim.jpeg" alt="drawing" width="400" />
 </div>
 
 ## Environmental Setup
