@@ -36,13 +36,6 @@ The experiment settings are the same as [PipeDream](https://github.com/msr-fiddl
 ```bash
 cd PipeOptim/image_classification
 bash scripts/resnet/pipeoptim.sh
-```
-
-## Experiment Results
-Experiment results when training ResNet-101 on Tiny-ImageNet.
-<div align="center">
-<img src="fig/convergence_resnet101_top1_time.pdf" alt="drawing" width="400" />
-</div>
 
 
 ## License
