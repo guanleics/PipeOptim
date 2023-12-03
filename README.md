@@ -10,7 +10,7 @@ This is a PyTroch implementation (based on the source code of [PipeDream](https:
 The following figure describes the main idea of PipeOptim.
 
 <div align="center">
-<img src="fig/pipeoptim.jpeg" alt="drawing" width="400" />
+<img src="fig/pipeoptim.jpeg" alt="drawing" width="600" />
 </div>
 
 PipeOptim uses the predicted weights to perform forward. The prediction formula for the forward pass is: 
@@ -31,11 +31,18 @@ PipeOptim computes $\Delta \mathbf{W}_{t}$ according to the update rule of the u
 ## Environmental Setup
 The experiment settings are the same as [PipeDream](https://github.com/msr-fiddle/pipedream).
 
+
 ## Quick Start
 ```bash
 cd PipeOptim/image_classification
 bash scripts/resnet/pipeoptim.sh
 ```
+
+## Experiment Results
+Experiment results when training ResNet-101 on Tiny-ImageNet.
+<div align="center">
+<img src="fig/convergence_resnet101_top1_time.pdf" alt="drawing" width="400" />
+</div>
 
 
 ## License
