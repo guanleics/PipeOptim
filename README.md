@@ -36,10 +36,10 @@ The experiment settings are the same as [PipeDream](https://github.com/msr-fiddl
 ### Image Classification
 [from PipeOptim/image_classification; run on 4 GPUs (including a single server with 4 GPUs)]
 ```bash
-python main_with_runtime.py --module models.resnet101.gpus=4 -b $BS --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR --epochs ${EPOCH} --lr $LR --weight-decay $DECAY --print-freq 200 --log_dir logs/xpipe_${NUM_GPU}_lr${LR} --lr_policy step --rank 0 --local_rank 0 --world_size 4  
-python main_with_runtime.py --module models.resnet101.gpus=4 -b $BS --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR --epochs ${EPOCH} --lr $LR --weight-decay $DECAY --print-freq 200 --log_dir logs/xpipe_${NUM_GPU}_lr${LR} --lr_policy step --rank 1 --local_rank 1 --world_size 4  
-python main_with_runtime.py --module models.resnet101.gpus=4 -b $BS --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR --epochs ${EPOCH} --lr $LR --weight-decay $DECAY --print-freq 200 --log_dir logs/xpipe_${NUM_GPU}_lr${LR} --lr_policy step --rank 2 --local_rank 2 --world_size 4 
-python main_with_runtime.py --module models.resnet101.gpus=4 -b $BS --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR --epochs ${EPOCH} --lr $LR --weight-decay $DECAY --print-freq 200 --log_dir logs/xpipe_${NUM_GPU}_lr${LR} --lr_policy step --rank 3 --local_rank 3 --world_size 4
+python main_with_runtime.py --module models.resnet101.gpus=4 -b 64 --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR  --lr $LR  --print-freq 200  --lr_policy step --rank 0 --local_rank 0 --world_size 4  
+python main_with_runtime.py --module models.resnet101.gpus=4 -b 64 --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR  --lr $LR  --print-freq 200 --lr_policy step --rank 1 --local_rank 1 --world_size 4  
+python main_with_runtime.py --module models.resnet101.gpus=4 -b 64 --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR  --lr $LR  --print-freq 200  --lr_policy step --rank 2 --local_rank 2 --world_size 4 
+python main_with_runtime.py --module models.resnet101.gpus=4 -b 64 --data_dir <path to ImageNet> --config_path models/resnet101/gpus=4/mp_conf.json --distributed_backend gloo --master_addr $MASTER_ADDR --lr $LR  --print-freq 200  --lr_policy step --rank 3 --local_rank 3 --world_size 4
 ```
 
 Alternatively, one can execute the following scripts.
@@ -50,10 +50,10 @@ bash scripts/resnet/pipeoptim.sh
 ### Translation
 [from PipeOptim/translation; run on 4 GPUs (including a single server with 4 GPUs)]
 ```bash
-python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64  --epochs ${EPOCH} --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 0 --local_rank 0 
-python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64  --epochs ${EPOCH} --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 1 --local_rank 1 
-python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64  --epochs ${EPOCH} --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 2 --local_rank 2 
-python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64  --epochs ${EPOCH} --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 3 --local_rank 3
+python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64   --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 0 --local_rank 0 
+python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64   --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 1 --local_rank 1 
+python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64   --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 2 --local_rank 2 
+python main_with_runtime.py --data_dir <path to WMT-16> --module models.gnmt.gpus=4 --config_path models/gnmt/gpus=4/mp_conf.json  --master_addr localhost  --distributed_backend gloo --lr 0.0003 -b 64   --print-freq 200 --checkpoint_dir ./checkpoint_dir --recompute --partitions 1 --rank 3 --local_rank 3
 ```
 
 Alternatively, one can execute the following scripts.
