@@ -13,7 +13,7 @@ The following figure describes the main idea of PipeOptim.
 <img src="fig/pipeoptim_00.jpg" alt="drawing" width="700" />
 </div>
 
-PipeOptim uses the predicted weights to perform forward pass. The prediction formula for the forward pass is: 
+PipeOptim uses the predicted weights to perform the forward pass. The prediction formula for the forward pass is: 
 ```math
 \hat{\mathbf W}_{t+s} = \mathbf W_t - lr \cdot s \cdot\Delta \mathbf{W}_{t},
 ```
@@ -25,7 +25,8 @@ PipeOptim lets each GPU compute $s$ via
 ```
 where $D$ refers to the pipeline depth and $rank$ is the index of a stage with $rank \in \{0, 1, \dots, size-1\}$.
 
-PipeOptim computes $\Delta \mathbf{W}_{t}$ according to the update rule of the used optimizer. For Momentum SGD, Adam, and AdamW, $\Delta \mathbf{W}_{t}$ is computed by
+PipeOptim computes $\Delta \mathbf{W}_{t}$ according to the update rule of the used optimizer. For Momentum SGD (SGDM), Adam, and AdamW, $\Delta \mathbf{W}_t$ is computed by
+
 <div align="center">
 <img src="fig/delta.png" alt="drawing" width="400" />
 </div>
