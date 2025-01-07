@@ -10,7 +10,7 @@ This is a PyTorch implementation (based on the source code of [PipeDream](https:
 The following figure describes the main idea of PipeOptim.
 
 <div align="center">
-<img src="fig/pipeoptim_00.jpg" alt="drawing" width="600" />
+<img src="fig/pipeoptim_00.jpg" alt="drawing" width="700" />
 </div>
 
 PipeOptim uses the predicted weights to perform forward pass. The prediction formula for the forward pass is: 
@@ -27,7 +27,7 @@ where $D$ refers to the pipeline depth and $rank$ is the index of a stage with $
 
 PipeOptim computes $\Delta \mathbf{W}_{t}$ according to the update rule of the used optimizer. For Momentum SGD, Adam, and AdamW, $\Delta \mathbf{W}_{t}$ is computed by
 <div align="center">
-<img src="fig/delta.png" alt="drawing" width="600" />
+<img src="fig/delta.png" alt="drawing" width="400" />
 </div>
 
 
@@ -68,7 +68,8 @@ bash scripts/gnmt8/pipeoptim_adam.sh
 ## Environmental Results
 When training ResNet-101 (up) and Inception-V3 (down) on Tiny-Imagenet with SGDM, the experimental results are:
 <center class="half">
-     <img src="fig/convergence_resnet101_tinyimagenet_acc_epoch_00.jpg" width="500"/><img src="fig/convergence_inceptionv3_tinyimagenet_acc_epoch_00.jpg" width="500"/>
+     <img src="fig/convergence_resnet101_tinyimagenet_acc_epoch_00.jpg" width="500"/>
+     <img src="fig/convergence_inceptionv3_tinyimagenet_acc_epoch_00.jpg" width="500"/>
 </center>
 
 ## License
