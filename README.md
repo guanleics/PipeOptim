@@ -66,7 +66,7 @@ bash scripts/gnmt8/pipeoptim_adam.sh
 ```
 
 ## Environmental Results
-When training ResNet-101 (up) and Inception-V3 (down) on Tiny-Imagenet with SGDM, the experimental results are:
+When training ResNet-101 (left) and Inception-V3 (right) on Tiny-Imagenet with SGDM, the experimental results are:
 <img src="fig/convergence_resnet101_tinyimagenet_acc_epoch_00.jpg" width="500"/><img src="fig/convergence_inceptionv3_tinyimagenet_acc_epoch_00.jpg" width="500"/>
 
 
