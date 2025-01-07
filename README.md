@@ -10,7 +10,7 @@ This is a PyTorch implementation (based on the source code of [PipeDream](https:
 The following figure describes the main idea of PipeOptim.
 
 <div align="center">
-<img src="fig/pipeoptim.pdf" alt="drawing" width="600" />
+<img src="fig/pipeoptim_00.jpg" alt="drawing" width="600" />
 </div>
 
 PipeOptim uses the predicted weights to perform forward pass. The prediction formula for the forward pass is: 
@@ -66,9 +66,9 @@ bash scripts/gnmt8/pipeoptim_adam.sh
 ```
 
 ## Environmental Results
-When training ResNet-101 and Inception-V3 on Tiny-Imagenet with SGDM, the experimental results are:
+When training ResNet-101 (left) and Inception-V3 (right) on Tiny-Imagenet with SGDM, the experimental results are:
 <center class="half">
-     <img src="fig/convergence_resnet101_tinyimagenet_acc_epoch.pdf" width="200"/><img src="fig/convergence_inceptionv3_tinyimagenet_acc_epoch.pdf" width="200"/>
+     <img src="fig/convergence_resnet101_tinyimagenet_acc_epoch_00.jpg" width="300"/><img src="fig/convergence_inceptionv3_tinyimagenet_acc_epoch_00.jpg" width="300"/>
 </center>
 
 ## License
